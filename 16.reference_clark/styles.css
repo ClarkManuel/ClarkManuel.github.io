@@ -1,0 +1,33 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body, html {
+    height: 100%;
+}
+
+body {
+    display: flex;
+    justify-content: flex-end; /* Push content to the bottom */
+    align-items: center;
+    background-image: url('images/aihatsami.jpg'); /* Use the specified image */
+    background-size: cover;
+    background-position: center bottom; /* Align image to the bottom */
+    background-repeat: no-repeat;
+    flex-direction: column;
+}
+
+.text-box {
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.8); /* Slightly transparent background for the text box */
+    border-radius: 10px;
+    text-align: center;
+}
+
+.text-box p {
+    font-size: 24px;
+    font-family: 'Times New Roman', Times, serif; /* Changed to Times New Roman */
+    color: #333;
+}
