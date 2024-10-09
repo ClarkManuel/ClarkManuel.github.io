@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Click Text Change</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body, html {
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        #fullScreenImage {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        #textBox {
+            position: absolute;
+            bottom: 10%;
+            width: 100%;
+            text-align: center;
+            font-size: 2em;
+            color: yellow;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+        }
+    </style>
+</head>
+<body>
+
+    <img id="fullScreenImage" src="images/hat_remi.JPG" alt="Full Screen Image" onclick="changeText()">
+
+    <div id="textBox">Click the image to change the text!</div>
+
+    <script>
+        const sentences = [
+            "Remi the dog wears a hat!",
+            "This was a picture I took for an advertisment.",
+            "Two years ago I hat a small hat business.",
+            "Remi was the Ronald Mcdonald of the company.",
+            "If there's a dog, people will buy it!"
+        ];
+
+        let currentSentence = 0;
+
+        function changeText() {
+            currentSentence = (currentSentence + 1) % sentences.length;
+            document.getElementById('textBox').innerText = sentences[currentSentence];
+        }
+    </script>
+
+</body>
+</html>
